@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>РАУТ — салон красоты, Хабаровск</title>
+  <meta name="description" content="Салон красоты «РАУТ» в Хабаровске, ул. Запарина, 53: свадебные и вечерние образы, причёски и макияж, окрашивание, маникюр и педикюр в 4 и 6 рук. Ежедневно 10:00–20:00, онлайн-запись.">
+  <meta property="og:title" content="РАУТ — салон красоты, Хабаровск">
+  <meta property="og:description" content="Сборы невест и гостей до 10 человек, образы для фотосессий, услуги в 4 и 6 рук. Хабаровск, ул. Запарина, 53. Онлайн-запись.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="theme-color" content="#141210">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700;900&family=Onest:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Заставка -->
+  <div class="loader" aria-hidden="true"><span class="loader__word" data-brand></span></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Шапка -->
+  <header class="header">
+    <a href="#top" class="logo"><span class="logo__mark" data-brand></span><span class="logo__sub" data-tagline></span></a>
+    <nav class="nav" aria-label="Меню">
+      <a href="#services">Услуги</a>
+      <a href="#visit">Конструктор</a>
+      <a href="#masters">Мастера</a>
+      <a href="#works">Работы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="header__phone" data-phone></a>
+    <a href="#booking" class="btn btn--sm btn--head" data-book>Записаться</a>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+
+    <!-- 1. Первый экран -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow reveal" data-hero-eyebrow></p>
+        <h1 class="hero__title" data-hero-title></h1>
+        <p class="hero__lead reveal" data-hero-text></p>
+        <div class="hero__actions reveal">
+          <a href="#booking" class="btn btn--accent" data-book><span data-hero-cta></span><i class="arrow"></i></a>
+          <a href="#services" class="link-under">Смотреть цены</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <figure class="hero__img hero__img--1" data-speed="0.12"></figure>
+        <figure class="hero__img hero__img--2" data-speed="-0.08"></figure>
+        <figure class="hero__img hero__img--3" data-speed="0.2"></figure>
+        <a href="#booking" class="badge" aria-label="Онлайн-запись" data-book>
+          <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ" data-badge textLength="486" lengthAdjust="spacing"></textPath></text></svg>
+          <span class="badge__dot"></span>
+        </a>
+      </div>
+      <div class="hero__brand" aria-hidden="true" data-brand-big></div>
+    </section>
+
+    <!-- 2. Бегущая строка -->
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" data-marquee></div></div>
+
+    <!-- 3. Цифры -->
+    <section class="stats" data-stats></section>
+
+    <!-- 4. Услуги -->
+    <section class="services section" id="services">
+      <div class="section__head">
+        <p class="eyebrow">Услуги и цены</p>
+        <h2 class="h2 reveal">Всё, что нужно, <em>в одном месте</em></h2>
+      </div>
+      <div class="tabs" role="tablist" data-tabs></div>
+      <ul class="price-list" data-price-list></ul>
+      <div class="cursor-img" aria-hidden="true"></div>
+    </section>
+
+    <!-- 5. Конструктор визита -->
+    <section class="visit section section--dark" id="visit">
+      <div class="visit__grid">
+        <div>
+          <p class="eyebrow">Конструктор визита</p>
+          <h2 class="h2 reveal">Соберите свой день красоты</h2>
+          <p class="muted reveal">Отметьте услуги — мы сразу посчитаем стоимость и время. Подходит, если хотите сделать всё за один визит.</p>
+          <div class="presets" data-presets></div>
+          <div class="chips" data-chips></div>
+        </div>
+        <aside class="ticket reveal">
+          <div class="ticket__row"><span>Услуг</span><b data-sum-count>0</b></div>
+          <div class="ticket__row"><span>Время</span><b data-sum-time>—</b></div>
+          <div class="ticket__cut"></div>
+          <div class="ticket__total"><span>Итого</span><strong data-sum-price>0</strong></div>
+          <a href="#booking" class="btn btn--accent btn--block" data-sum-book>Записаться на это</a>
+          <p class="ticket__note">Цена ориентировочная, точную назовёт мастер.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 6. До / После -->
+    <section class="ba section">
+      <div class="ba__text">
+        <p class="eyebrow">До / После</p>
+        <h2 class="h2 reveal" data-ba-title></h2>
+        <p class="muted reveal" data-ba-text></p>
+      </div>
+      <div class="ba__frame reveal" data-ba>
+        <img data-ba-after alt="После" draggable="false">
+        <div class="ba__before"><img data-ba-before alt="До" draggable="false"></div>
+        <span class="ba__tag ba__tag--l">До</span><span class="ba__tag ba__tag--r">После</span>
+        <input type="range" min="0" max="100" value="50" class="ba__range" aria-label="Сравнить до и после">
+        <span class="ba__handle"><i></i></span>
+      </div>
+    </section>
+
+    <!-- 7. Мастера -->
+    <section class="masters section section--blush" id="masters">
+      <div class="section__head section__head--row">
+        <div>
+          <p class="eyebrow">Команда</p>
+          <h2 class="h2 reveal">Мастера, к которым <em>возвращаются</em></h2>
+        </div>
+        <div class="slider-nav"><button data-m-prev aria-label="Назад">←</button><button data-m-next aria-label="Вперёд">→</button></div>
+      </div>
+      <div class="masters__track" data-masters></div>
+    </section>
+
+    <!-- 8. Портфолио -->
+    <section class="works section" id="works">
+      <div class="section__head">
+        <p class="eyebrow">Портфолио</p>
+        <h2 class="h2 reveal">Наши работы</h2>
+      </div>
+      <div class="gallery" data-gallery></div>
+    </section>
+
+    <!-- 9. Отзывы -->
+    <section class="reviews section section--dark">
+      <div class="reviews__grid">
+        <div>
+          <p class="eyebrow">Отзывы</p>
+          <h2 class="h2 reveal">Говорят гости</h2>
+          <div class="slider-nav slider-nav--light"><button data-r-prev aria-label="Предыдущий">←</button><button data-r-next aria-label="Следующий">→</button></div>
+        </div>
+        <div class="stack" data-reviews></div>
+      </div>
+    </section>
+
+    <!-- 10. Вопросы -->
+    <section class="faq section">
+      <div class="faq__grid">
+        <div>
+          <p class="eyebrow">Вопросы</p>
+          <h2 class="h2 reveal">Коротко о главном</h2>
+        </div>
+        <div class="accordion" data-faq></div>
+      </div>
+    </section>
+
+    <!-- 11. Запись -->
+    <section class="booking section section--accent" id="booking">
+      <div class="booking__grid">
+        <div>
+          <h2 class="h2 h2--xl reveal">Запишитесь,<br>остальное <em>на нас</em></h2>
+          <p class="booking__lead">Выберите время в онлайн-записи или оставьте заявку — она откроется в WhatsApp салона, администратор подтвердит запись.</p>
+          <div class="booking__links" data-socials></div>
+        </div>
+        <form class="form" novalidate data-form>
+          <label class="field"><input name="name" required autocomplete="name" placeholder=" "><span>Ваше имя</span></label>
+          <label class="field"><input name="phone" type="tel" required autocomplete="tel" placeholder=" " inputmode="tel"><span>Телефон</span></label>
+          <label class="field field--select"><select name="service" data-service-select><option value="">Любая услуга</option></select><span>Услуга</span></label>
+          <label class="field"><textarea name="comment" rows="2" placeholder=" " data-comment></textarea><span>Комментарий</span></label>
+          <label class="check"><input type="checkbox" name="agree" required checked><span>Согласен(на) с <button type="button" class="link-btn" data-open-policy>политикой обработки данных</button></span></label>
+          <button class="btn btn--ink btn--block" type="submit">Отправить заявку</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 12. Контакты -->
+    <section class="contacts section" id="contacts">
+      <div class="contacts__grid">
+        <div class="contacts__info">
+          <p class="eyebrow">Контакты</p>
+          <h2 class="h2 reveal" data-address></h2>
+          <p class="contacts__note" data-address-note></p>
+          <dl class="hours" data-hours></dl>
+          <a class="contacts__phone" data-phone></a>
+          <a class="contacts__phone contacts__phone--2" data-phone2></a>
+          <a class="link-under" data-map-link target="_blank" rel="noopener">Открыть на карте ↗</a>
+        </div>
+        <div class="map" data-map></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand" data-brand></div>
+    <div class="footer__cols">
+      <p data-legal></p>
+      <button type="button" class="link-btn" data-open-policy>Политика конфиденциальности</button>
+      <button type="button" class="link-btn" data-open-cookies>Настройки cookie</button>
+      <p class="footer__credit" data-credit></p>
+    </div>
+    <p class="footer__copy">© <span data-year></span> <span data-brand></span></p>
+  </footer>
+
+  <!-- Плавающая кнопка (мобильные) -->
+  <a href="#booking" class="fab" data-book>Записаться онлайн</a>
+
+  <!-- Лайтбокс -->
+  <div class="lightbox" hidden><button class="lightbox__close" aria-label="Закрыть">×</button><img alt=""></div>
+
+  <!-- Cookie -->
+  <div class="cookie" role="dialog" aria-label="Использование cookie" hidden>
+    <p>Мы используем cookie, чтобы сайт работал удобнее и мы понимали, что вам интересно. <button type="button" class="link-btn" data-open-policy>Подробнее</button></p>
+    <div class="cookie__actions">
+      <button class="btn btn--sm btn--ghost" data-cookie="essential">Только необходимые</button>
+      <button class="btn btn--sm btn--accent" data-cookie="all">Принять все</button>
+    </div>
+  </div>
+
+  <!-- Политика -->
+  <dialog class="policy">
+    <button class="policy__close" aria-label="Закрыть">×</button>
+    <h3>Политика конфиденциальности</h3>
+    <p>Оставляя заявку, вы соглашаетесь на обработку имени и телефона для связи с вами по поводу записи (152-ФЗ «О персональных данных»). Данные не передаются третьим лицам.</p>
+    <p>Сайт использует cookie: необходимые — для работы сайта и запоминания вашего выбора; аналитические — только с вашего согласия. Изменить выбор можно в подвале сайта, «Настройки cookie».</p>
+  </dialog>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
